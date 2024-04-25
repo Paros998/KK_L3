@@ -15,7 +15,6 @@ using namespace std;
 
 namespace enc {
 	class AffineCoder {
-		static int randomInRange(int min, int max);
 
 		map<char, char> keys_map_{};
 		vector<char> letters;
@@ -25,6 +24,8 @@ namespace enc {
 		[[nodiscard]] char decodeChar(char in) const;
 
 	public:
+		static int randomInRange(int min, int max);
+
 		static string sanitize(const string &in);
 
 		AffineCoder() {
